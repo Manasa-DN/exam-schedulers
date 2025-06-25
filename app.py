@@ -62,7 +62,7 @@ if uploaded_file:
     subgraph_nodes = list(graph.nodes())[:20]
     subgraph = graph.subgraph(subgraph_nodes)
     colors = [time_slots[exam] for exam in subgraph.nodes()]
-    labels = {exam: f"{exam}\n(Slot {time_slots[exam]+1})" for exam in subgraph.nodes()]
+    labels = {exam: f"{exam}\n(Slot {time_slots[exam]+1})" for exam in subgraph.nodes()}
 
     fig, ax = plt.subplots(figsize=(12, 8))
     nx.draw(
